@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "exceljs"
+            ],
             "outputPath": "dist/reactive-templates-forms",
             "index": "src/index.html",
             "main": "src/main.ts",

@@ -54,12 +54,12 @@ export class TemplateValuechangeComponent implements OnInit {
 
   setValue() {
     let contact = {
-      firstname: 'Rahul',
-      lastname: 'Dravid',
+      firstname: 'Elon',
+      lastname: 'Musk',
       address: {
-        city: 'Bangalore',
+        city: 'Austin',
         street: 'Brigade Road',
-        pincode: '600070',
+        pincode: '10001',
       },
     };
     this.templateForm.setValue(contact);
@@ -67,9 +67,9 @@ export class TemplateValuechangeComponent implements OnInit {
 
   setAddress() {
     let address = {
-      city: 'Bangalore',
+      city: 'Orlando',
       street: 'Brigade Road',
-      pincode: '600070',
+      pincode: '10010',
     };
 
     this.templateForm.control.get('address')?.setValue(address);

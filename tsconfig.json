@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -16,6 +17,11 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "paths": {
+     "exceljs": [
+       "node_modules/exceljs/dist/exceljs.min"
+     ]
+    },
     "lib": [
       "es2018",
       "dom"

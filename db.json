@@ -2,14 +2,14 @@
   "people": [
     {
       "id": 1,
-      "name": "Don Bradman"
+      "name": "Elon Musk"
     },
     {
       "id": 2,
-      "name": "Sachin Tendulkar"
+      "name": "Marc Zuckerberg"
     },
     {
-      "name": "jjjjjj",
+      "name": "Praveen Aggarwal",
       "id": 3
     }
   ]

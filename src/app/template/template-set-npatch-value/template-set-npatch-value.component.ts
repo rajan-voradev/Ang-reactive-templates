@@ -32,16 +32,16 @@ export class TemplateSetNPatchValueComponent implements OnInit {
 
   setDefault() {
     let contact = {
-      firstname: 'Sachin',
-      lastname: 'Tendulkar',
-      email: 'sachin@gmail.com',
+      firstname: 'Elon',
+      lastname: 'Musk',
+      email: 'emsuk@gmail.com',
       gender: 'male',
       isMarried: true,
       country: '2',
       address: {
-        city: 'Mumbai',
+        city: 'Austin',
         street: 'Perry Cross Rd',
-        pincode: '400050',
+        pincode: '10001',
       },
     };
 
@@ -50,16 +50,16 @@ export class TemplateSetNPatchValueComponent implements OnInit {
 
   setValue() {
     let contact = {
-      firstname: 'Rahul',
-      lastname: 'Dravid',
-      email: 'rahul@gmail.com',
+      firstname: 'Praveen',
+      lastname: 'aggarwal',
+      email: 'paggrawal@gmail.com',
       gender: 'male',
       isMarried: true,
       country: '1',
       address: {
-        city: 'Bangalore',
+        city: 'San Jose',
         street: 'Brigade Road',
-        pincode: '600070',
+        pincode: '10002',
       },
     };
 
@@ -68,9 +68,9 @@ export class TemplateSetNPatchValueComponent implements OnInit {
 
   setAddress() {
     let address = {
-      city: 'Bangalore',
+      city: 'San Fran',
       street: 'Brigade Road',
-      pincode: '600070',
+      pincode: '10003',
     };
 
     this.templateForm.control.get('address')?.setValue(address);
@@ -78,9 +78,9 @@ export class TemplateSetNPatchValueComponent implements OnInit {
 
   setCountry() {
     let address = {
-      city: 'Bangalore',
+      city: 'Boston',
       street: 'Brigade Road',
-      pincode: '600070',
+      pincode: '10004',
     };
 
     this.templateForm.control.get('country')?.setValue('1');
@@ -88,7 +88,7 @@ export class TemplateSetNPatchValueComponent implements OnInit {
 
   patchAddress() {
     let address = {
-      city: 'Bangalore',
+      city: 'Seattle',
       street: 'Brigade Road',
       //pincode: "600070",
       //firstname:'saurv'
@@ -99,8 +99,8 @@ export class TemplateSetNPatchValueComponent implements OnInit {
 
   patchName() {
     let contact = {
-      firstname: 'Rahul',
-      lastname: 'Dravid',
+      firstname: 'Elon',
+      lastname: 'Musk',
     };
 
     this.templateForm.control.patchValue(contact);
