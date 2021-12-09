@@ -2,6 +2,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NarikCustomValidatorsModule } from '@narik/custom-validators';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,10 @@ import { GlobalErrorHandlerService } from './globalerror.service';
 import { GlobalHttperrorComponent } from './samples/global-httperror/global-httperror.component';
 import { GlobalHttpInterceptorService } from './global.httperror.service';
 import { GitHubService } from './samples/http-headers/github.service';
+import { NotificationComponent } from './samples/notification/notification.component';
+import { FormsvalidateComponent } from './validate/formsvalidate/formsvalidate.component';
+import { ReactiveformsComponent } from './validate/reactiveforms/reactiveforms.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,9 @@ import { GitHubService } from './samples/http-headers/github.service';
     ExceljsExportComponent,
     GlobalerrorComponent,
     GlobalHttperrorComponent,
+    NotificationComponent,
+    FormsvalidateComponent,
+    ReactiveformsComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +70,8 @@ import { GitHubService } from './samples/http-headers/github.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NarikCustomValidatorsModule,
+    NgbModule,
   ],
   providers: [
     {

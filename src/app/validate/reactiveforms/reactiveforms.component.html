@@ -1,0 +1,102 @@
+<div class="container">
+    <form [formGroup]="form">
+        <div>
+            <label class="col-3">equalTo</label>
+            <div class="col-9">
+                <input type="password" formControlName="password">
+                <p class="alert alert-danger" *ngIf="form.controls.password.errors?.required">required error</p>
+                <input type="password" formControlName="certainPassword">
+                <p class="alert alert-danger" *ngIf="form.controls.certainPassword.errors?.equalTo">equalTo error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">range</label>
+            <div class="col-9">
+                <input type="text" formControlName="rangeCont">
+                <p class="alert alert-danger" *ngIf="form.controls.rangeCont.errors?.['rangeLength']">error message</p>
+            </div>
+        </div>
+
+        <div>
+            <label class="col-3">required</label>
+            <div class="col-9">
+                <input type="text" formControlName="requried">
+                <p class="alert alert-danger" *ngIf="form.controls.requried.errors?.required">required error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">minlength</label>
+            <div class="col-9">
+                <input type="text" formControlName="minlength">
+                <p class="alert alert-danger" *ngIf="form.controls.minlength.errors?.minlength">minlength error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">maxlength</label>
+            <div class="col-9">
+                <input type="text" formControlName="maxlength">
+                <p class="alert alert-danger" *ngIf="form.controls.maxlength.errors?.maxlength">maxlength error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">greater than</label>
+            <div class="col-9">
+                <input type="text" formControlName="greaterthan">
+                <p class="alert alert-danger" *ngIf="form.controls.greaterthan.errors?.gt">greater than error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">greater than or equal</label>
+            <div class="col-9">
+                <input type="text" formControlName="greaterthanorequal">
+                <p class="alert alert-danger" *ngIf="form.controls.greaterthanorequal.errors?.gte">greater than error
+                </p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">base64</label>
+            <div class="col-9">
+                <input type="text" formControlName="base64">
+                <p class="alert alert-danger" *ngIf="form.controls.base64.errors?.base64">base64 error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">date</label>
+            <div class="col-9">
+                <input type="text" formControlName="date">
+                <p class="alert alert-danger" *ngIf="form.controls.date.errors?.date">date error</p>
+            </div>
+        </div>
+        <div>
+            <label class="col-3">maxDate</label>
+            <div class="col-9">
+                <input type="text" formControlName="maxDate">
+                <p class="alert alert-danger" *ngIf="form.controls.maxDate.errors?.maxDate">maxDate error</p>
+            </div>
+        </div>
+
+        <div>
+            <label class="col-3">minDate</label>
+            <div class="col-9">
+                <input type="text" formControlName="minDate">
+                <p class="alert alert-danger" *ngIf="form.controls.minDate.errors?.minDate">minDate error</p>
+            </div>
+        </div>
+
+        <div>
+            <label class="col-3">digits</label>
+            <div class="col-9">
+                <input type="text" formControlName="digits">
+                <p class="alert alert-danger" *ngIf="form.controls.digits.errors?.digits">digits error</p>
+            </div>
+        </div>
+
+        <div>
+            <label class="col-3">email</label>
+            <div class="col-9">
+                <input type="text" formControlName="email">
+                <p class="alert alert-danger" *ngIf="form.controls.email.errors?.email">email error</p>
+            </div>
+        </div>
+    </form>
+</div>

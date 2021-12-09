@@ -21,8 +21,10 @@ import { TemplateStatuschangeComponent } from './template/template-statuschange/
 import { TemplateValidatorsComponent } from './template/template-validators/template-validators.component';
 import { TemplateValuechangeComponent } from './template/template-valuechange/template-valuechange.component';
 import { GlobalerrorComponent } from './samples/globalerror/globalerror.component';
-import { GlobalHttperrorComponent }
-  from './samples/global-httperror/global-httperror.component';
+import { GlobalHttperrorComponent } from './samples/global-httperror/global-httperror.component';
+import { NotificationComponent } from './samples/notification/notification.component';
+import { FormsvalidateComponent } from './validate/formsvalidate/formsvalidate.component';
+import { ReactiveformsComponent } from './validate/reactiveforms/reactiveforms.component';
 
 const routes: Routes = [
   { path: 'reactive', component: ReactiveSetNPatchValueComponent },
@@ -33,8 +35,14 @@ const routes: Routes = [
   { path: 'templatevaluechange', component: TemplateValuechangeComponent },
   { path: 'reactivevalidators', component: ReactiveValidatorsComponent },
   { path: 'templatevalidators', component: TemplateValidatorsComponent },
-  { path: 'reactivecustomvalidators', component: ReactiveCustomValidatorComponent },
-  { path: 'templatecustomvalidators', component: TemplateCustomValidatorComponent },
+  {
+    path: 'reactivecustomvalidators',
+    component: ReactiveCustomValidatorComponent,
+  },
+  {
+    path: 'templatecustomvalidators',
+    component: TemplateCustomValidatorComponent,
+  },
   { path: 'excelexport', component: ExceljsExportComponent },
   { path: 'candeactivate', component: CanDeactivateComponent },
   { path: 'httpclient', component: HttpClientComponent },
@@ -46,11 +54,14 @@ const routes: Routes = [
   { path: 'globalerror', component: GlobalerrorComponent },
   { path: 'globalhttp', component: GlobalHttperrorComponent },
   { path: 'error', component: ErrorComponent },
-  { path: '**', component: ErrorComponent }
+  { path: 'notification', component: NotificationComponent },
+  { path: 'validate', component: FormsvalidateComponent },
+  { path: 'reactiveforms', component: ReactiveformsComponent },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
