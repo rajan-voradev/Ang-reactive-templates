@@ -1,131 +1,134 @@
 <div class="container" style="margin-top: 70px">
-  <div class="col-sm-8 offset-sm-2">
-    <h1>Angular Sample</h1>
-
-    <ul>
-      <li>
-        <a [routerLink]="['/template']" routerLinkActive="router-link-active">
-          Template(SetNPatch)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/templatestatuschange']" routerLinkActive="router-link-active">
-          Template(Status Change)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/templatevaluechange']" routerLinkActive="router-link-active">
-          Template(Value Change)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/templatevalidators']" routerLinkActive="router-link-active">
-          Template(Validators)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/templatecustomvalidators']" routerLinkActive="router-link-active">
-          Template(Custom Validators)
-        </a>
-      </li>
-      <li>
-        &nbsp;
-      </li>
-      <li>
-        <a [routerLink]="['/reactive']" routerLinkActive="router-link-active">
-          Reactive(SetNPatch)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/reactivestatuschange']" routerLinkActive="router-link-active">
-          Reactive(Status Change)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/reactivevaluechange']" routerLinkActive="router-link-active">
-          Reactive(Value Change)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/reactivevalidators']" routerLinkActive="router-link-active">
-          Reactive(Validators)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/reactivecustomvalidators']" routerLinkActive="router-link-active">
-          Reactive(Custom Validators)
-        </a>
-      </li>
-      <li>
-        &nbsp;
-      </li>
-      <li>
-        <a [routerLink]="['/excelexport']" routerLinkActive="router-link-active">
-          Export to Excel
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/httpclient']" routerLinkActive="router-link-active">
-          Http Client
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/httpheaders']" routerLinkActive="router-link-active">
-          Http Headers - Start JSON Server (json-server --db.json from the root)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/httpinterceptor']" routerLinkActive="router-link-active">
-          Http Interceptor
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/candeactivate']" routerLinkActive="router-link-active">
-          Can-Deactivate
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/product']" routerLinkActive="router-link-active">
-          Product
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/observables']" routerLinkActive="router-link-active">
-          Observables
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/globalerror']" routerLinkActive="router-link-active">
-          Global Error
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/globalhttp']" routerLinkActive="router-link-active">
-          Global HTTP Error
-        </a>
-      </li>
-      <li>
-        &nbsp;
-      </li>
-      <li>
-        <a [routerLink]="['/notification']" routerLinkActive="router-link-active">
-          Notification
-        </a>
-      </li>
-      <li>
-        &nbsp;
-      </li>
-      <li>
-        <a [routerLink]="['/validate']" routerLinkActive="router-link-active">
-          Form Validate (NGX)
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/reactiveforms']" routerLinkActive="router-link-active">
-          Reactive Form Validate (NGX)
-        </a>
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-sm">
+      <h1>Angular Sample</h1>
+      <ul>
+        <li>
+          <a [routerLink]="['/template']" routerLinkActive="router-link-active">
+            Template(SetNPatch)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/templatestatuschange']" routerLinkActive="router-link-active">
+            Template(Status Change)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/templatevaluechange']" routerLinkActive="router-link-active">
+            Template(Value Change)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/templatevalidators']" routerLinkActive="router-link-active">
+            Template(Validators)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/templatecustomvalidators']" routerLinkActive="router-link-active">
+            Template(Custom Validators)
+          </a>
+        </li>
+        <li>
+          &nbsp;
+        </li>
+        <li>
+          <a [routerLink]="['/reactive']" routerLinkActive="router-link-active">
+            Reactive(SetNPatch)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/reactivestatuschange']" routerLinkActive="router-link-active">
+            Reactive(Status Change)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/reactivevaluechange']" routerLinkActive="router-link-active">
+            Reactive(Value Change)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/reactivevalidators']" routerLinkActive="router-link-active">
+            Reactive(Validators)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/reactivecustomvalidators']" routerLinkActive="router-link-active">
+            Reactive(Custom Validators)
+          </a>
+        </li>
+        <li>
+          &nbsp;
+        </li>
+        <li>
+          <a [routerLink]="['/excelexport']" routerLinkActive="router-link-active">
+            Export to Excel
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/httpclient']" routerLinkActive="router-link-active">
+            Http Client
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/httpheaders']" routerLinkActive="router-link-active">
+            Http Headers - Start JSON Server (json-server --db.json from the root)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/httpinterceptor']" routerLinkActive="router-link-active">
+            Http Interceptor
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/candeactivate']" routerLinkActive="router-link-active">
+            Can-Deactivate
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/product']" routerLinkActive="router-link-active">
+            Product
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/observables']" routerLinkActive="router-link-active">
+            Observables
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/globalerror']" routerLinkActive="router-link-active">
+            Global Error
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/globalhttp']" routerLinkActive="router-link-active">
+            Global HTTP Error
+          </a>
+        </li>
+        <li>
+          &nbsp;
+        </li>
+        <li>
+          <a [routerLink]="['/notification']" routerLinkActive="router-link-active">
+            Notification
+          </a>
+        </li>
+        <li>
+          &nbsp;
+        </li>
+        <li>
+          <a [routerLink]="['/validate']" routerLinkActive="router-link-active">
+            Form Validate (NGX)
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/reactiveforms']" routerLinkActive="router-link-active">
+            Reactive Form Validate (NGX)
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
-<router-outlet></router-outlet>

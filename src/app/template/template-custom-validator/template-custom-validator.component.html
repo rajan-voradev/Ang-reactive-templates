@@ -1,22 +1,20 @@
-<h1>Custom Validator in Template driven forms</h1>
-
-<h2>Template Form</h2>
-
-<form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-
-  <label for="numVal">Number :</label>
-  <input type="text" name="numVal" ngModel #numVal="ngModel" customValidator>
-  <div *ngIf="!numVal.valid && (numVal.dirty ||numVal.touched)">
-    <div *ngIf="numVal.errors.customerror">
-      The number should be greater than {{numVal.errors.requiredValue}}
+<h1>Custom Validator in Template driven forms (WIP)</h1>
+<div class="form-group" style="float: left; width:50%;">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <label for="numVal">Number :</label>
+    <input class="form-control" type="text" name="numVal" ngModel #numVal="ngModel" customValidator>
+    <div *ngIf="!numVal.valid && (numVal.dirty ||numVal.touched)">
+      <div *ngIf="numVal.errors.customerror">
+        The number should be greater than {{numVal.errors.requiredValue}}
+      </div>
     </div>
-  </div>
 
-  <p>Is Form Valid : {{myForm.valid}} </p>
+    <p>Is Form Valid : {{myForm.valid}} </p>
 
-  <p>Form : {{ myForm.value | json}} </p>
-  <p>
-    <button type="submit" [disabled]="!myForm.valid">Submit</button>
-  </p>
+    <p>Form : {{ myForm.value | json}} </p>
+    <p>
+      <button type="submit" [disabled]="!myForm.valid">Submit</button>
+    </p>
 
-</form>
+  </form>
+</div>
