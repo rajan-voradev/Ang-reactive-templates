@@ -1,98 +1,85 @@
 <h3>{{title}}</h3>
- 
-<div style="float: left; width:50%;">
- 
+<div class="form-group" style="float: left; width:50%;">
   <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" novalidate>
- 
     <p>
-      <label for="firstname">First Name </label>
-      <input type="text" id="firstname" name="firstname" formControlName="firstname">
+      <label for="firstname">First Name: </label>
+      <input class="form-control" type="text" id="firstname" name="firstname" formControlName="firstname">
     </p>
- 
     <p>
       <label for="lastname">Last Name </label>
-      <input type="text" id="lastname" name="lastname" formControlName="lastname">
+      <input class="form-control" type="text" id="lastname" name="lastname" formControlName="lastname">
     </p>
- 
+
     <p>
       <label for="email">Email </label>
-      <input type="text" id="email" name="email" formControlName="email">
+      <input class="form-control" type="text" id="email" name="email" formControlName="email">
     </p>
- 
+
     <p>
-      <label for="gender">Gender </label>
-      <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
-      <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+      <label for="gender">Gender : </label>
+      <input class="form-control-input" type="radio" value="male" id="gender" name="gender" formControlName="gender">
+      Male
+      <input class="form-control-input" type="radio" value="female" id="gender" name="gender" formControlName="gender">
+      Female
     </p>
- 
+
     <p>
-      <label for="isMarried">Married </label>
-      <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+      <label for="isMarried">Married : </label>
+      <input class="form-control-input" type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
     </p>
- 
+
     <p>
       <label for="country">Country </label>
-      <select id="country" name="country" formControlName="country">
+      <select class="form-control" id="country" name="country" formControlName="country">
         <option [ngValue]="c.id" *ngFor="let c of countryList">
           {{c.name}}
         </option>
       </select>
     </p>
- 
- 
+
     <div formGroupName="address">
- 
+
       <p>
         <label for="city">City</label>
-        <input type="text" class="form-control" name="city" formControlName="city">
+        <input class="form-control" type="text" class="form-control" name="city" formControlName="city">
       </p>
- 
+
       <p>
         <label for="street">Street</label>
-        <input type="text" class="form-control" name="street" formControlName="street">
+        <input class="form-control" type="text" class="form-control" name="street" formControlName="street">
       </p>
- 
+
       <p>
-        <label for="pincode">Pin Code</label>
-        <input type="text" class="form-control" name="pincode" formControlName="pincode">
+        <label for="pincode">Zip Code</label>
+        <input class="form-control" type="text" class="form-control" name="pincode" formControlName="pincode">
       </p>
- 
+
     </div>
- 
- 
-    <button>Submit</button>
-    <div>
-      <button type="button" (click)="setDefault()">Default</button>
-    </div>
-    <div>
-      <button type="button" (click)="setValue()">SetValue</button>
-      <button type="button" (click)="setAddress()">Address</button>
-      <button type="button" (click)="setCountry()">Country</button>
-    </div>
-    <div>
-      <button type="button" (click)="patchName()">Name</button>
-      <button type="button" (click)="patchAddress()">Address</button>
-      <button type="button" (click)="reset()">Reset</button>
-    </div>
- 
- 
+
+    <button class="btn btn-primary">Submit</button>&nbsp;
+    <button type="button" class="btn btn-primary" (click)="setDefault()">Reset</button>
+    <br><br>
+    <button type="button" class="btn btn-success" (click)="setValue()">SetValue</button>&nbsp;
+    <button type="button" class="btn btn-success" (click)="setAddress()">Address</button>&nbsp;
+    <button type="button" class="btn btn-success" (click)="setCountry()">Country</button>&nbsp;
+    <br><br>
+    <button type="button" class="btn btn-danger" (click)="patchName()">Name</button>&nbsp;
+    <button type="button" class="btn btn-danger" (click)="patchAddress()">Address</button>&nbsp;
+    <button type="button" class="btn btn-danger" (click)="reset()">Reset</button>
   </form>
 </div>
- 
-<div style="float: right; width:50%;">
- 
+
+<div class="container" style="float: right; width:50%;">
   <h3>Form Status</h3>
-  <b>valid : </b>{{reactiveForm.valid}}
-  <b>invalid : </b>{{reactiveForm.invalid}}
-  <b>touched : </b>{{reactiveForm.touched}}
-  <b>untouched : </b>{{reactiveForm.untouched}}
-  <b>pristine : </b>{{reactiveForm.pristine}}
-  <b>dirty : </b>{{reactiveForm.dirty}}
-  <b>disabled : </b>{{reactiveForm.disabled}}
-  <b>enabled : </b>{{reactiveForm.enabled}}
- 
- 
+  <b>valid : </b>{{reactiveForm.valid}}<br>
+  <b>invalid : </b>{{reactiveForm.invalid}}<br>
+  <b>touched : </b>{{reactiveForm.touched}}<br>
+  <b>untouched : </b>{{reactiveForm.untouched}}<br>
+  <b>pristine : </b>{{reactiveForm.pristine}}<br>
+  <b>dirty : </b>{{reactiveForm.dirty}}<br>
+  <b>disabled : </b>{{reactiveForm.disabled}}<br>
+  <b>enabled : </b>{{reactiveForm.enabled}}<br>
+  <br>
   <h3>Form Value</h3>
   {{reactiveForm.value |json}}
- 
 </div>

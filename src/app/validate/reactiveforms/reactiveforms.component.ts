@@ -21,8 +21,8 @@ export class ReactiveformsComponent implements OnInit {
     );
     const rangeCont = new FormControl('', CustomValidators.rangeLength([5, 9]));
     const requried = new FormControl('', Validators.required);
-    const minlength = new FormControl('', CustomValidators.min(10));
-    const maxlength = new FormControl('', CustomValidators.max(20));
+    const minlength = new FormControl('', CustomValidators.min(5));
+    const maxlength1 = new FormControl('', CustomValidators.max(7));
     const greaterthan = new FormControl('', CustomValidators.gt(10));
     const greaterthanorequal = new FormControl('', CustomValidators.gte(10));
     const base64 = new FormControl('', CustomValidators.base64);
@@ -38,7 +38,7 @@ export class ReactiveformsComponent implements OnInit {
       rangeCont,
       requried,
       minlength,
-      maxlength,
+      maxlength1,
       greaterthan,
       greaterthanorequal,
       base64,

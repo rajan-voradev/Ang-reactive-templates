@@ -5,6 +5,7 @@ import { NotificationService } from './notification.service';
 @Component({
   selector: 'app-notification',
   template: `
+    <h1>This is a Notification sample</h1>
     <button (click)="onClick()">Show error</button>
     <br />
     <h2 *ngIf="error$ | async as error">{{ error }}</h2>

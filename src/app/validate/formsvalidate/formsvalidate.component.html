@@ -1,65 +1,68 @@
-<label>Number greater than 5: </label>
-<input type="number" ngModel name="field" #field="ngModel" [gt]="5">
-<!-- Will display : error message and must be greater than 10 -->
-<p *ngIf="field.errors?.['gt']">Must be greater than 5</p>
-<br>
-<label>Number greater than 10: </label>
-<input type="number" ngModel name="field2" #field2="ngModel" [min]="10">
-<p *ngIf="field2.errors?.['min']">Must be greater than 10</p>
-<br>
-<label>Character length 5 to 9: </label>
-<input type="text" ngModel name="field1" #field1="ngModel" [rangeLength]="[5, 9]">
-<p *ngIf="field1.errors?.['rangeLength']">error message</p>
-<br>
-<label>Greater than or equal to 11: </label>
-<input type="number" ngModel name="field3" #field3="ngModel" [gte]="11">
-<p *ngIf="field3.errors?.['gte']">Greater than or equal to 11</p>
-<br>
-<label>Max value 20: </label>
-<input type="number" ngModel name="field4" #field4="ngModel" [max]="20">
-<p *ngIf="field4.errors?.['max']">Max value 20</p>
-<br>
-<label>Less than 20: </label>
-<input type="number" ngModel name="field5" #field5="ngModel" [lt]="20">
-<p *ngIf="field5.errors?.['lt']">Less than 20</p>
-<br>
-<label>Less than or equal to 20: </label>
-<input type="number" ngModel name="field6" #field6="ngModel" [lte]="20">
-<p *ngIf="field6.errors?.['lte']">Less than or equal to 20</p>
-<br>
-<label>Number range 10 to 20: </label>
-<input type="number" ngModel name="field7" #field7="ngModel" [range]="[10, 20]">
-<p *ngIf="field7.errors?.['lte']">Number range 10 to 20</p>
-<br>
-<label>Digits: </label>
-<input type="text" ngModel name="field8" #field8="ngModel" digits>
-<p *ngIf="field8.errors?.['digits']">Digits only</p>
-<br>
-<label>Number only: </label>
-<input type="text" ngModel name="field9" #field9="ngModel" number>
-<p *ngIf="field9.errors?.['number']">Number only</p>
-<br>
-<label>URL: </label>
-<input type="text" ngModel name="field10" #field10="ngModel" url>
-<p *ngIf="field10.errors?.['url']">URL validation</p>
-<br>
-<label>Email: </label>
-<input type="text" ngModel name="field11" #field11="ngModel" ngxemail>
-<p *ngIf="field11.errors?.['email']">Email validation</p>
-<br>
-<label>Date: </label>
-<input type="text" ngModel name="field12" #field12="ngModel" date>
-<p *ngIf="field12.errors?.['date']">Date validation</p>
-<br>
-<label>Minimum Date: </label>
-<input type="text" ngModel name="field13" #field13="ngModel" minDate="2021-12-01">
-<p *ngIf="field13.errors?.['minDate']">Minimum Date validation (2021-12-01)</p>
-<br>
-<label>Maximumn Date: </label>
-<input type="text" ngModel name="field14" #field14="ngModel" maxDate="2021-12-31">
-<p *ngIf="field14.errors?.['maxDate']">Maximum Date validation (2021-12-31)</p>
-<br>
-<label>Pattern: </label>
-<input type="text" ngModel name="field15" #field15="ngModel" pattern="[a-z]{6}">
-<p *ngIf="field15.errors?.['pattern']">Pattern [a-z]6</p>
-<br>
+<h1>Form validation using Template</h1>
+<div class="form-group" style="float: left; width:50%;">
+    <label>Number greater than 5: </label>
+    <input class="form-control" type="number" ngModel name="field" #field="ngModel" [gt]="5">
+    <!-- Will display : error message and must be greater than 10 -->
+    <p class="alert alert-danger" *ngIf="field.errors?.['gt']">Must be greater than 5</p>
+    <br>
+    <label>Number greater than 10: </label>
+    <input class="form-control" type="number" ngModel name="field2" #field2="ngModel" [min]="10">
+    <p class="alert alert-danger" *ngIf="field2.errors?.['min']">Must be greater than 10</p>
+    <br>
+    <label>Character length 5 to 9: </label>
+    <input class="form-control" type="text" ngModel name="field1" #field1="ngModel" [rangeLength]="[5, 9]">
+    <p class="alert alert-danger" *ngIf="field1.errors?.['rangeLength']">error message</p>
+    <br>
+    <label>Greater than or equal to 11: </label>
+    <input class="form-control" type="number" ngModel name="field3" #field3="ngModel" [gte]="11">
+    <p class="alert alert-danger" *ngIf="field3.errors?.['gte']">Greater than or equal to 11</p>
+    <br>
+    <label>Max value 20: </label>
+    <input class="form-control" type="number" ngModel name="field4" #field4="ngModel" [max]="20">
+    <p class="alert alert-danger" *ngIf="field4.errors?.['max']">Max value 20</p>
+    <br>
+    <label>Less than 20: </label>
+    <input class="form-control" type="number" ngModel name="field5" #field5="ngModel" [lt]="20">
+    <p class="alert alert-danger" *ngIf="field5.errors?.['lt']">Less than 20</p>
+    <br>
+    <label>Less than or equal to 20: </label>
+    <input class="form-control" type="number" ngModel name="field6" #field6="ngModel" [lte]="20">
+    <p class="alert alert-danger" *ngIf="field6.errors?.['lte']">Less than or equal to 20</p>
+    <br>
+    <label>Number range 10 to 20: </label>
+    <input class="form-control" type="number" ngModel name="field7" #field7="ngModel" [range]="[10, 20]">
+    <p class="alert alert-danger" *ngIf="field7.errors?.['lte']">Number range 10 to 20</p>
+    <br>
+    <label>Digits: </label>
+    <input class="form-control" type="text" ngModel name="field8" #field8="ngModel" digits>
+    <p class="alert alert-danger" *ngIf="field8.errors?.['digits']">Digits only</p>
+    <br>
+    <label>Number only: </label>
+    <input class="form-control" type="text" ngModel name="field9" #field9="ngModel" number>
+    <p class="alert alert-danger" *ngIf="field9.errors?.['number']">Number only</p>
+    <br>
+    <label>URL: </label>
+    <input class="form-control" type="text" ngModel name="field10" #field10="ngModel" url>
+    <p class="alert alert-danger" *ngIf="field10.errors?.['url']">URL validation</p>
+    <br>
+    <label>Email: </label>
+    <input class="form-control" type="text" ngModel name="field11" #field11="ngModel" ngxemail>
+    <p class="alert alert-danger" *ngIf="field11.errors?.['email']">Email validation</p>
+    <br>
+    <label>Date: </label>
+    <input class="form-control" type="text" ngModel name="field12" #field12="ngModel" date>
+    <p class="alert alert-danger" *ngIf="field12.errors?.['date']">Date validation</p>
+    <br>
+    <label>Minimum Date: </label>
+    <input class="form-control" type="text" ngModel name="field13" #field13="ngModel" minDate="2021-12-01">
+    <p class="alert alert-danger" *ngIf="field13.errors?.['minDate']">Minimum Date validation (2021-12-01)</p>
+    <br>
+    <label>Maximumn Date: </label>
+    <input class="form-control" type="text" ngModel name="field14" #field14="ngModel" maxDate="2021-12-31">
+    <p class="alert alert-danger" *ngIf="field14.errors?.['maxDate']">Maximum Date validation (2021-12-31)</p>
+    <br>
+    <label>Pattern: </label>
+    <input class="form-control" type="text" ngModel name="field15" #field15="ngModel" pattern="[a-z]{6}">
+    <p class="alert alert-danger" *ngIf="field15.errors?.['pattern']">Pattern [a-z]6</p>
+    <br>
+</div>
