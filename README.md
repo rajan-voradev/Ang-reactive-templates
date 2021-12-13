@@ -1,4 +1,4 @@
-# ReactiveTemplatesForms
+# Reactive Templates Forms
 
 ## Installing the code
 
