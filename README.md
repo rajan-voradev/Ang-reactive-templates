@@ -1,7 +1,5 @@
 # ReactiveTemplatesForms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
-
 ## Installing the code
 
 The following are detailed instructions for installing the code
